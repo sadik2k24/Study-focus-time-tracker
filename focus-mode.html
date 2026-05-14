@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <link rel="stylesheet" href="Css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <title>Focus Mode — TutorTime</title>
+</head>
+<body data-page="focus">
+<script src="JavaScript/icons-sprite.js"></script>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="brand">
+                <div class="brand-logo">
+                    <img src="images/logo1.1.jpg" alt="TutorTime logo" width="50" height="50">
+                </div>
+                <h1>TutorTime</h1>
+            </div>
+            <nav class="side-menu">
+                <ul>
+                    <li>
+                        <a href="index.html" class="nav-link">
+                            <svg class="icon" aria-hidden="true"><use href="#i-home"></use></svg>
+                            <span>Home</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="focus-timer.html" class="nav-link">
+                            <svg class="icon" aria-hidden="true"><use href="#i-timer"></use></svg>
+                            <span>Focus Timer</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="task.html" class="nav-link">
+                            <svg class="icon" aria-hidden="true"><use href="#i-check-circle"></use></svg>
+                            <span>Task</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="planner.html" class="nav-link">
+                            <svg class="icon" aria-hidden="true"><use href="#i-calendar"></use></svg>
+                            <span>Planner</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="focus-mode.html" class="nav-link active">
+                            <svg class="icon" aria-hidden="true"><use href="#i-lock"></use></svg>
+                            <span>Focus Mode</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="side-footer">
+                <div class="user-profile">
+                    <div class="avatar">P</div>
+                    <span class="username">Profile</span>
+                </div>
+                <a href="login-form.html" class="login-btn">Login</a>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="page-header">
+                <div>
+                    <h1>Focus Mode</h1>
+                    <p>Reduce visual noise and signal to yourself that you are in a protected study block.</p>
+                </div>
+            </header>
+
+            <div class="card focus-intro">
+                <p style="color:#475569;line-height:1.7;">Focus Mode opens a calm full-screen layer so other parts of the interface stay out of sight. Pair it with the Focus Timer and phone in another room for best results.</p>
+                <ul class="focus-benefits">
+                    <li>Single cue: one screen, one intention.</li>
+                    <li>Exit anytime with the button or the Escape key.</li>
+                    <li>Use after you have water, timer, and materials ready.</li>
+                </ul>
+                <button type="button" class="get-started-btn" id="btn-focus-enter">
+                    <svg class="icon" aria-hidden="true"><use href="#i-lock"></use></svg>
+                    Enter focus mode
+                </button>
+            </div>
+        </main>
+    </div>
+
+    <div class="focus-overlay" id="focus-overlay" role="dialog" aria-modal="true" aria-labelledby="focus-overlay-title">
+        <button type="button" class="btn-exit" id="btn-focus-exit">Exit</button>
+        <svg class="icon icon--xl" aria-hidden="true" style="color:#a7f3d0;margin-bottom:20px;"><use href="#i-lock"></use></svg>
+        <h2 id="focus-overlay-title">You are in focus mode</h2>
+        <p>Breathe once, start your timer, and work on one thing until this session ends. You have got this.</p>
+        <button type="button" class="get-started-btn" id="btn-focus-exit-2" style="background:#ecfdf5;color:#042f2e;border-color:#ecfdf5;">Return to app</button>
+    </div>
+
+    <script src="JavaScript/app-pages.js"></script>
+</body>
+</html>

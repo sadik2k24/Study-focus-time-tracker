@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <link rel="stylesheet" href="Css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <title>Tasks — TutorTime</title>
+</head>
+<body data-page="tasks">
+<script src="JavaScript/icons-sprite.js"></script>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="brand">
+                <div class="brand-logo">
+                    <img src="images/logo1.1.jpg" alt="TutorTime logo" width="50" height="50">
+                </div>
+                <h1>TutorTime</h1>
+            </div>
+            <nav class="side-menu">
+                <ul>
+                    <li>
+                        <a href="index.html" class="nav-link">
+                            <svg class="icon" aria-hidden="true"><use href="#i-home"></use></svg>
+                            <span>Home</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="focus-timer.html" class="nav-link">
+                            <svg class="icon" aria-hidden="true"><use href="#i-timer"></use></svg>
+                            <span>Focus Timer</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="task.html" class="nav-link active">
+                            <svg class="icon" aria-hidden="true"><use href="#i-check-circle"></use></svg>
+                            <span>Task</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="planner.html" class="nav-link">
+                            <svg class="icon" aria-hidden="true"><use href="#i-calendar"></use></svg>
+                            <span>Planner</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="focus-mode.html" class="nav-link">
+                            <svg class="icon" aria-hidden="true"><use href="#i-lock"></use></svg>
+                            <span>Focus Mode</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="side-footer">
+                <div class="user-profile">
+                    <div class="avatar">P</div>
+                    <span class="username">Profile</span>
+                </div>
+                <a href="login-form.html" class="login-btn">Login</a>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="page-header">
+                <div>
+                    <h1>Tasks</h1>
+                    <p>Set priority, stay organized, and check things off. Your list stays in this browser.</p>
+                </div>
+            </header>
+
+            <div class="card task-board">
+                <div class="task-compose">
+                    <label class="task-field-label" for="task-input">New task</label>
+                    <div class="task-input-row">
+                        <input type="text" id="task-input" placeholder="e.g. Finish lab report draft" maxlength="200" autocomplete="off">
+                        <button type="button" class="task-add-btn" id="task-add">
+                            <svg class="icon" aria-hidden="true"><use href="#i-add"></use></svg>
+                            Add
+                        </button>
+                    </div>
+                    <span class="task-field-label">Priority for next task</span>
+                    <div class="priority-row">
+                        <div class="priority-segment" role="group" aria-label="Default priority">
+                            <button type="button" data-priority="high">High</button>
+                            <button type="button" class="is-on" data-priority="medium">Med</button>
+                            <button type="button" data-priority="low">Low</button>
+                        </div>
+                    </div>
+                    <p class="task-hint">Open tasks sort with <strong>High</strong> first, then Medium, then Low. Completed tasks move to the bottom.</p>
+                </div>
+                <p id="task-empty" class="task-empty">No tasks yet. Add one above and pick a priority.</p>
+                <ul class="task-list" id="task-list"></ul>
+            </div>
+        </main>
+    </div>
+    <script src="JavaScript/app-pages.js"></script>
+</body>
+</html>

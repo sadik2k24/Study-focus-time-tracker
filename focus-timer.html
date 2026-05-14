@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <link rel="stylesheet" href="Css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <title>Focus Timer — TutorTime</title>
+</head>
+<body data-page="timer">
+<script src="JavaScript/icons-sprite.js"></script>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="brand">
+                <div class="brand-logo">
+                    <img src="images/logo1.1.jpg" alt="TutorTime logo" width="50" height="50">
+                </div>
+                <h1>TutorTime</h1>
+            </div>
+            <nav class="side-menu">
+                <ul>
+                    <li>
+                        <a href="index.html" class="nav-link">
+                            <svg class="icon" aria-hidden="true"><use href="#i-home"></use></svg>
+                            <span>Home</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="focus-timer.html" class="nav-link active">
+                            <svg class="icon" aria-hidden="true"><use href="#i-timer"></use></svg>
+                            <span>Focus Timer</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="task.html" class="nav-link">
+                            <svg class="icon" aria-hidden="true"><use href="#i-check-circle"></use></svg>
+                            <span>Task</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="planner.html" class="nav-link">
+                            <svg class="icon" aria-hidden="true"><use href="#i-calendar"></use></svg>
+                            <span>Planner</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="focus-mode.html" class="nav-link">
+                            <svg class="icon" aria-hidden="true"><use href="#i-lock"></use></svg>
+                            <span>Focus Mode</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="side-footer">
+                <div class="user-profile">
+                    <div class="avatar">P</div>
+                    <span class="username">Profile</span>
+                </div>
+                <a href="login-form.html" class="login-btn">Login</a>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="page-header">
+                <div>
+                    <h1>Focus Timer</h1>
+                    <p>Use classic Pomodoro rhythms or your own focus length. One block, one intention.</p>
+                </div>
+            </header>
+
+            <div class="timer-layout">
+                <div class="card">
+                    <section class="timer-technique" aria-labelledby="pomodoro-title">
+                        <h3 id="pomodoro-title">Pomodoro technique</h3>
+                        <ul>
+                            <li>Pick one task before you start; protect the full block from interruptions.</li>
+                            <li>Default rhythm: <strong>25 min</strong> focus → <strong>5 min</strong> short break; every fourth break, take a <strong>15 min</strong> long break.</li>
+                            <li>When the timer ends, stand, stretch, hydrate—then reset or switch to break mode.</li>
+                        </ul>
+                    </section>
+
+                    <div class="timer-modes" role="tablist" aria-label="Timer mode">
+                        <button type="button" class="mode-chip active" data-mode="pomodoro">Pomodoro · 25 min</button>
+                        <button type="button" class="mode-chip" data-mode="short">Short break · 5 min</button>
+                        <button type="button" class="mode-chip" data-mode="long">Long break · 15 min</button>
+                        <button type="button" class="mode-chip" data-mode="custom">Custom focus</button>
+                    </div>
+
+                    <div class="timer-custom-panel" id="timer-custom-panel" aria-live="polite">
+                        <label for="custom-focus-min">Focus length (minutes)</label>
+                        <div class="timer-custom-row">
+                            <input type="number" id="custom-focus-min" min="1" max="180" value="25" inputmode="numeric">
+                            <button type="button" class="btn-apply-custom" id="btn-custom-apply">Apply</button>
+                        </div>
+                        <p style="font-size:0.8rem;color:#64748b;margin:0;line-height:1.45;">Saved on this device. Switch to <strong>Custom focus</strong> to use it, or press Apply while in custom mode to reload the duration.</p>
+                    </div>
+
+                    <p class="timer-mode-label" id="timer-mode-label">Pomodoro</p>
+                    <div class="timer-display-wrap">
+                        <div class="timer-ring" id="timer-ring" style="--p:0;">
+                            <span class="timer-time" id="timer-time">25:00</span>
+                        </div>
+                        <div class="timer-controls">
+                            <button type="button" class="btn-primary" id="btn-timer-play">
+                                <svg class="icon" aria-hidden="true"><use href="#i-play"></use></svg>
+                                Start
+                            </button>
+                            <button type="button" class="btn-secondary" id="btn-timer-pause" style="display:none;">
+                                <svg class="icon" aria-hidden="true"><use href="#i-pause"></use></svg>
+                                Pause
+                            </button>
+                            <button type="button" class="btn-secondary" id="btn-timer-reset">
+                                <svg class="icon" aria-hidden="true"><use href="#i-refresh"></use></svg>
+                                Reset
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card timer-side">
+                    <h3 style="font-size:1.05rem;margin-bottom:8px;color:#0f172a;">Session log</h3>
+                    <p style="color:#64748b;font-size:0.9rem;margin-bottom:16px;">Completed focus rounds (Pomodoro + custom) are saved in this browser.</p>
+                    <div class="stat-row">
+                        <span class="stat-label">Completed focus sessions</span>
+                        <span class="stat-value" id="stat-completed">0</span>
+                    </div>
+                    <div class="stat-row">
+                        <span class="stat-label">Tip</span>
+                        <span class="stat-value" style="font-weight:500;font-size:0.85rem;">Phone face-down, tabs closed</span>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="JavaScript/app-pages.js"></script>
+</body>
+</html>

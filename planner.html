@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <link rel="stylesheet" href="Css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <title>Planner — TutorTime</title>
+</head>
+<body data-page="planner">
+<script src="JavaScript/icons-sprite.js"></script>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="brand">
+                <div class="brand-logo">
+                    <img src="images/logo1.1.jpg" alt="TutorTime logo" width="50" height="50">
+                </div>
+                <h1>TutorTime</h1>
+            </div>
+            <nav class="side-menu">
+                <ul>
+                    <li>
+                        <a href="index.html" class="nav-link">
+                            <svg class="icon" aria-hidden="true"><use href="#i-home"></use></svg>
+                            <span>Home</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="focus-timer.html" class="nav-link">
+                            <svg class="icon" aria-hidden="true"><use href="#i-timer"></use></svg>
+                            <span>Focus Timer</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="task.html" class="nav-link">
+                            <svg class="icon" aria-hidden="true"><use href="#i-check-circle"></use></svg>
+                            <span>Task</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="planner.html" class="nav-link active">
+                            <svg class="icon" aria-hidden="true"><use href="#i-calendar"></use></svg>
+                            <span>Planner</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="focus-mode.html" class="nav-link">
+                            <svg class="icon" aria-hidden="true"><use href="#i-lock"></use></svg>
+                            <span>Focus Mode</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="side-footer">
+                <div class="user-profile">
+                    <div class="avatar">P</div>
+                    <span class="username">Profile</span>
+                </div>
+                <a href="login-form.html" class="login-btn">Login</a>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="page-header">
+                <div>
+                    <h1>Planner</h1>
+                    <p>Outline your day in three blocks. Plans are stored per calendar day on this device.</p>
+                </div>
+            </header>
+
+            <div class="card">
+                <div class="planner-toolbar">
+                    <label for="planner-date" style="display:flex;align-items:center;gap:8px;font-weight:600;color:#334155;">
+                        <svg class="icon icon--md" aria-hidden="true"><use href="#i-calendar"></use></svg>
+                        Date
+                    </label>
+                    <input type="date" id="planner-date">
+                    <button type="button" id="planner-save">Save day</button>
+                </div>
+                <div class="planner-slot">
+                    <label for="planner-morning">Morning</label>
+                    <textarea id="planner-morning" placeholder="Classes, commute, deep work…"></textarea>
+                </div>
+                <div class="planner-slot">
+                    <label for="planner-afternoon">Afternoon</label>
+                    <textarea id="planner-afternoon" placeholder="Assignments, group work…"></textarea>
+                </div>
+                <div class="planner-slot">
+                    <label for="planner-evening">Evening</label>
+                    <textarea id="planner-evening" placeholder="Review, reading, wind-down…"></textarea>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="JavaScript/app-pages.js"></script>
+</body>
+</html>

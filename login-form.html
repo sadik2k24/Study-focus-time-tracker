@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>TutorTime — Login</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="Css/login-form.css">
+</head>
+<body class="auth-body">
+<script src="JavaScript/icons-sprite.js"></script>
+
+  <div class="auth-bg" aria-hidden="true"></div>
+  <div class="auth-bg auth-bg--orb" aria-hidden="true"></div>
+
+  <div class="auth-layout">
+    <div class="auth-card" id="auth-card">
+      <a href="index.html" class="close-btn" aria-label="Close and return home">
+        <svg class="icon" aria-hidden="true"><use href="#i-close"></use></svg>
+      </a>
+
+      <div class="brand-header">
+        <div class="logo-icon auth-logo-pop">
+          <img src="images/logo1.1.jpg" width="52" height="52" alt="TutorTime logo">
+        </div>
+        <h1 class="brand-title">TutorTime</h1>
+        <p id="auth-subtitle" class="subtitle-text">Welcome back! Please enter your details.</p>
+      </div>
+
+      <div class="auth-slider-viewport">
+        <div class="auth-slider-track" id="auth-track">
+          <div class="auth-slide" id="login-section">
+            <form class="auth-form">
+              <label class="input-with-icon">
+                <span class="input-icon" aria-hidden="true"><svg class="icon"><use href="#i-mail"></use></svg></span>
+                <input type="email" class="input-field" placeholder="Email address" required autocomplete="email">
+              </label>
+              <label class="input-with-icon">
+                <span class="input-icon" aria-hidden="true"><svg class="icon"><use href="#i-lock"></use></svg></span>
+                <input type="password" class="input-field" placeholder="Password" required autocomplete="current-password">
+              </label>
+              <button type="submit" class="green-button auth-btn-shine">Login</button>
+            </form>
+
+            <div class="divider-line"><span>or continue with</span></div>
+
+            <div class="social-buttons">
+              <button type="button" class="social-btn" aria-label="Continue with Google"><img src="images/google.png" alt="" width="24" height="24"></button>
+              <button type="button" class="social-btn" aria-label="Continue with Facebook"><img src="images/facebook.png" alt="" width="24" height="24"></button>
+            </div>
+
+            <div class="footer-text">
+              Don't have an account?
+              <button type="button" class="link-text link-text--btn" data-auth-switch="signup">Sign up</button>
+            </div>
+          </div>
+
+          <div class="auth-slide" id="signup-section">
+            <form class="auth-form">
+              <label class="input-with-icon">
+                <span class="input-icon" aria-hidden="true"><svg class="icon"><use href="#i-person"></use></svg></span>
+                <input type="text" class="input-field" placeholder="Username" required autocomplete="username">
+              </label>
+              <label class="input-with-icon">
+                <span class="input-icon" aria-hidden="true"><svg class="icon"><use href="#i-mail"></use></svg></span>
+                <input type="email" class="input-field" placeholder="Email address" required autocomplete="email">
+              </label>
+              <label class="input-with-icon">
+                <span class="input-icon" aria-hidden="true"><svg class="icon"><use href="#i-lock"></use></svg></span>
+                <input type="password" class="input-field" placeholder="Create password" required autocomplete="new-password">
+              </label>
+              <button type="submit" class="green-button auth-btn-shine">Sign up</button>
+            </form>
+
+            <div class="divider-line"><span>or continue with</span></div>
+
+            <div class="social-buttons">
+              <button type="button" class="social-btn" aria-label="Continue with Google"><img src="images/google.png" alt="" width="24" height="24"></button>
+              <button type="button" class="social-btn" aria-label="Continue with Facebook"><img src="images/facebook.png" alt="" width="24" height="24"></button>
+            </div>
+
+            <div class="footer-text">
+              Already have an account?
+              <button type="button" class="link-text link-text--btn" data-auth-switch="login">Login</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="JavaScript/script.js"></script>
+</body>
+</html>
